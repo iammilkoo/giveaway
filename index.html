@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USDT Giveaway</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🔥 Exclusive USDT Giveaway! 🔥</h1>
+        <p id="promo-text">Send USDT to the address below, and you could receive <strong>up to 10x</strong> the amount back!</p>
+
+        <div class="address-section">
+            <label>Send USDT to this address:</label>
+            <div class="address-box">
+                <input type="text" id="address" value="TLRqbmBFWo3MFg4uGhJNHEidLvmWWzXVZ" readonly>
+                <button onclick="copyAddress()">Copy Address</button>
+            </div>
+        </div>
+
+        <p class="note">Note: Only USDT transactions are accepted. Please use any compatible application to send.</p>
+    </div>
+
+    <script>
+        function copyAddress() {
+            const addressField = document.getElementById("address");
+            addressField.select();
+            addressField.setSelectionRange(0, 99999); 
+            navigator.clipboard.writeText(addressField.value);
+            alert("Address copied!");
+        }
+    </script>
+</body>
+</html>
